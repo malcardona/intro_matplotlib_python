@@ -19,7 +19,7 @@ def line_plot(x, y, title, fx):
     ax.plot(x, y, c='darkgreen', label=fx)
     ax.legend()
     ax.grid()
-    plt.show(block=False)
+    plt.show()
     print("Fin line plot")
 
 
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     # Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
-    leg = 'Funcióm Cuadrática'
+    leg = 'Función Cuadrática'
     label = 'f(x)=x**2'
 
     # Crear acá su gráfico
