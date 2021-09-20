@@ -11,6 +11,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def scat(x, xlabel, y1, ylabel, title, label1):
+    # general
+    fig = plt.figure()
+    fx = fig.add_subplot()
+    fx.set_title(title, fontsize=16)
+    fx.set_facecolor('whitesmoke')
+    fx.set_ylabel(ylabel)
+    fx.set_xlabel(xlabel)
+
+    #plot
+    fx.scatter(x, y1, color='b', marker='^', label=label1)
+    fx.legend()
+    plt.show()
+
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
@@ -33,5 +47,7 @@ if __name__ == '__main__':
     # Elegir un marker a elección
 
     # Crear acá su gráfico
+
+    disper = scat(x, 'x', y, 'f(x)', 'Scatter Plot', 'tan(x)')
 
     print("terminamos")
