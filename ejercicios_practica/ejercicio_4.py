@@ -11,6 +11,36 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def nxn_plt(x, xlabel, y1, label1, y2, label2, y3, label3, y4, label4, ylabel, title):
+    # general
+    fig = plt.figure()
+    fig.suptitle(title, fontsize=16)
+    fig.set_facecolor('whitesmoke')
+    
+    #grid 4x4
+    fx1 = fig.add_subplot(2, 2, 1)
+    fx2 = fig.add_subplot(2, 2, 2)
+    fx3 = fig.add_subplot(2, 2, 3)
+    fx4 = fig.add_subplot(2, 2, 4)
+
+    #graf1
+    fx1.scatter(x, y1, color='b', marker='^', label=label1)
+    fx1.set_ylabel(ylabel)
+    fx1.legend()
+    #graf2
+    fx2.scatter(x, y2, color='c', marker='*', label=label2)
+    fx2.legend()
+    #graf3
+    fx3.scatter(x, y3, color='g', marker='.', label=label3)
+    fx3.set_ylabel(ylabel)
+    fx3.set_xlabel(xlabel)
+    fx3.legend()
+    #graf4
+    fx4.scatter(x, y4, color='k', marker='+', label=label4)
+    fx4.set_xlabel(xlabel)
+    fx4.legend()
+    plt.show()
+
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
@@ -53,5 +83,7 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
+
+    grafico = nxn_plt(x, 'x', y1, 'x**2', y2, 'x**3', y3, 'x**4', y4, 'raiz(x)', 'f(x)', 'Figura con múltiples gráficos')
 
     print("terminamos")
